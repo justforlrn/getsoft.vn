@@ -1,2 +1,2 @@
 FROM nginx:alpine
-COPY . /var/www/getsoft.vn
+COPY ./src /usr/share/nginx/html
