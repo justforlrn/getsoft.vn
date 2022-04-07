@@ -1,0 +1,10 @@
+name: getsoft-home-page
+on:
+  push:
+    branches: [ duy ]
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
