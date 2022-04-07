@@ -27,5 +27,3 @@ jobs:
           tags: justforlrn/getsoft:lastest
       - name: Verify
         run: echo ${{ steps.docker_build.outputs.digest }}
-      - name: Install npm dependencies
-        run: npm install
