@@ -23,6 +23,7 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
+          pull: true
           tags: justforlrn/getsoft:lastest
       - name: Verify
         run: echo ${{ steps.docker_build.outputs.digest }}
