@@ -27,3 +27,5 @@ jobs:
           tags: justforlrn/getsoft:lastest
       - name: Verify
         run: echo ${{ steps.docker_build.outputs.digest }}
+        run: docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} -p ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+        run: docker run -p 4444:80 justforlrn/getsoft:lastest
