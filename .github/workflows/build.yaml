@@ -22,8 +22,7 @@ jobs:
         with:
           context: ./
           file: ./Dockerfile
-          builder: ${{ steps.buildx.outputs.name }}
           push: true
-          tags: getsoft
+          tags: getsoft:lastest
       - name: Verify
         run: echo ${{ steps.docker_build.outputs.digest }}
