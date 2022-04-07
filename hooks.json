@@ -1,8 +1,8 @@
 [
     {
         "id": "redeploy",
-        "execute-command": "/var/www/getsoft.vn/redeploy.sh",
-        "command-working-directory": "/var/www/getsoft.vn/src",
+        "execute-command": "./redeploy.sh",
+        "command-working-directory": "./src",
         "response-message": "Redeploying API server."
     }
 ]
