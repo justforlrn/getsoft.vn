@@ -27,3 +27,13 @@ jobs:
           tags: justforlrn/getsoft:lastest
       - name: Verify
         run: echo ${{ steps.docker_build.outputs.digest }}
+  redeploy:
+    name: Redeploy webhook call
+    runs-on: ubuntu-18.04
+    needs: [docker]
+    steps:
+      - name: Deploy docker container webhook
+        uses: joelwmale/webhook-action@master
+        env:
+          WEBHOOK_URL: ${{ secrets.DEPLOY_WEBHOOK_URL  }}
+          data: "{ 'myField': 'myFieldValue'}"
