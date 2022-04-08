@@ -1,0 +1,7 @@
+version: '3'
+services:
+  api:
+    image: justforlrn/getsoft:lastest
+    restart: always
+    ports:
+      - 5555:80
